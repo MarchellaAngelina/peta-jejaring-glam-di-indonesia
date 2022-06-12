@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Peta Jejaring GLAM di Indonesia – GLAM Indonesia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700|Merriweather:300,300i" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="css/leaflet.extra-markers.min.css" />
+<link rel="stylesheet" href="css/eph-common.css" />
+<link rel="stylesheet" href="css/eph-heritage-sites.css" />
+</head>
+<body>
+<section id="panel">
+  <header id="branding" role="banner">
+    <p>GLAM Indonesia</p>
+    <h1>Peta Jejaring GLAM di Indonesia</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#index">Indeks</a></li>
+      <li><a href="#about">Tentang</a></li>
+    </ul>
+  </nav>
+  <div id="loading" class="panel-content" data-display="flex">
+    <div class="loader"></div>
+  </div>
+  <section id="index" class="panel-content" data-display="flex">
+    <header>
+      <p class="author">Situs ini dibuat dan dipelihara oleh <a href="mailto:marchellangelina@gmail.com">Marchella Angelina</a>, Pemagang Teknologi Wikimedia Indonesia.</p>
+      <label for="filter">Saring</label>
+      <div id="filter">
+        <select>
+          <option value="all">Semua situs GLAM – </option>
+        </select>
+      </div>
+    </header>
+    <ol id="index-list"></ol>
+  </section>
+  <section id="details" class="panel-content" data-display="block"><!-- dummy node --></section>
+  <section id="about" class="panel-content" data-display="block">
+    <p><b>Peta Jejaring GLAM di Indonesia</b> menunjukkan lokasi instansi GLAM (Galleries, Libraries, Archives, Museums) atau (Galeri, Perpustakaan, Arsip, Museum) yang dideklarasikan oleh Negara Indonesia.
+      Setiap instansi GLAM direpresentasikan oleh penanda peta yang ketika diklik akan memberikan lebih banyak informasi tentang lokasi tersebut.</p>
+    <img id="eph" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Logo_WMID_Menurun_SVG.svg/1200px-Logo_WMID_Menurun_SVG.svg.png" alt="Ensiklopedia Warisan Negara Indonesia">
+    <p>Data pada Peta Jejaring GLAM di Indonesia ini berasal dari <a href="https://www.wikidata.org/">Wikidata</a>, yang merupakan anak  
+      proyek dari Wikipedia, dan dikompilasi sebagai bagian dari <i><b>GLAM Indonesia</b></i>, sebuah
+      program dari <a href="https://wikimedia.or.id/">Wikimedia Indonesia</a>.</p>
+    <p>Jika anda akrab dengan Layanan Kueri Wikidata dan ingin memperoleh atau menjelajahi data mentah, silakan merujuk
+      ke <a href="#" id="wdqs-link">kueri</a> ini.</p>
+    <p>Untuk melaporkan bug, memberi saran perbaikan, atau melihat kode sumber aplikasi peta ini, silakan merujuk ke
+      <a href="https://github.com/MarchellaAngelina/peta-jejaring-glam-di-indonesia">repositori GitHub</a> aplikasi ini.</p>
+  </section>
+</section>
+<section id="map"></section>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+<script src="js/leaflet.extra-markers.min.js"></script>
+<script src="js/osmtogeojson.js"></script>
+<script src="js/load-jsonp.js"></script>
+<script src="js/eph-heritage-sites-globals.js"></script>
+<script src="js/eph-common.js"></script>
+<script src="js/eph-heritage-sites.js"></script>
+</body>
+</html>
